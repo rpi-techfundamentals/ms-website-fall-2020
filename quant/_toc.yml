@@ -1,7 +1,10 @@
-file: markdown
+file: intro
 sections:
-- file: content
-- file: intro
 - file: schedule
-- file: notebooks
 - file: syllabus
+- file: session1/02
+  sections:
+  - file: session1/01
+- file: sessions/session1
+  sections:
+  - file: sessions/session2

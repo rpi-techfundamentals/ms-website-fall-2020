@@ -1,7 +1,4 @@
-![](media/image1.jpeg){width="6.213888888888889in"
-height="0.7284722222222222in"}
-
-SYLLABUS
+Sylabus
 ========
 
 Quantitative Methods for Business
@@ -33,7 +30,7 @@ Floor (Sev. Center)
 
 **Office Hours:**Tuesday 2:00 PM -- 4:00 PM
 
-COURSE DESCRIPTION: 
+COURSE DESCRIPTION:
 -------------------
 
 This course is designed to provide the student with an understanding of
@@ -64,10 +61,10 @@ management science models in terms of what they are and why they are
 useful; and (3) understand the use of computer software packages such as
 Microsoft Excel in applying quantitative methods to decision making.
 
-COURSE ASSESSMENT MEASURES 
+COURSE ASSESSMENT MEASURES
 --------------------------
 
-[Homework Assignments:]{.underline}
+Homework Assignments:
 
 There will be frequent homework assignments, listed on the course
 website. These assignments are intended for you to become more familiar
@@ -114,7 +111,7 @@ Submit the "pdf" of your final report using the designated LMS
 assignment tab. The due date for the report is available on the course
 calendar.
 
-[Exams:]{.underline}
+Exams:
 
 There will be two in-class exams -- see the course calendar (on the last
 page) for the dates. Each test will primarily emphasize the material
@@ -218,7 +215,7 @@ as would any classroom disruption (request to change the behavior;
 request to leave the class; dismissal of the class and referral to
 Student Affairs.) 
 
-ACADEMIC INTEGRITY 
+ACADEMIC INTEGRITY
 ------------------
 
 Student-teacher relationships are built on trust. For example, students
@@ -251,11 +248,11 @@ assignment, please ask for clarification.
 ACADEMIC ACCOMMODATIONS
 -----------------------
 
+
 Rensselaer Polytechnic Institute strives to make all learning experiences as accessible as possible. If you anticipate or experience academic barriers based on a disability, please let me know immediately so that we can discuss your options.  
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 To establish reasonable accommodations, please register with The Office of Disability Services for Students ([mailto:dss\@rpi.edu](mailto:dss@rpi.edu); 518-276-8197; 4226 Academy Hall).  After registration, make arrangements with me as soon as possible to discuss your accommodations so that they may be implemented in a timely fashion."
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 COURSE CALENDAR
 ---------------
