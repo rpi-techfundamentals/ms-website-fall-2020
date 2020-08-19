@@ -1,6 +1,7 @@
 import yaml
 import pandas as pd
 import subprocess
+from tabulate import tabulate
 def load_yaml_file(file):
     """
     Loads a yaml file from file system.
@@ -30,7 +31,8 @@ def update_yaml_file(file, data):
 def pandas_to_md(df, file, title):
     s = title
     separator = "\n============================\n\n"
-    table=df.to_markdown(tablefmt="grid")
+    #table=df.to_markdown(tablefmt="grid")
+    table=tabulate(df, tablefmt="pipe", headers="keys")
     output= s+separator+table
     with open(file, "w") as text_file:
         text_file.write(output)
