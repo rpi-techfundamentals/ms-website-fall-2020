@@ -1,5 +1,6 @@
 import yaml
 import pandas as pd
+import subprocess
 def load_yaml_file(file):
     """
     Loads a yaml file from file system.
@@ -25,6 +26,15 @@ def update_yaml_file(file, data):
 
     except subprocess.CalledProcessError as e:
         print("error: " + e)
+
+def pandas_to_md(df, file, title):
+    s = title
+    separator = "\n============================\n\n"
+    table=df.to_markdown(tablefmt="grid")
+    output= s+separator+table
+    with open(file, "w") as text_file:
+        text_file.write(output)
+
 
 def write_md_file(filename, df):
     print("Updating the file: " + filename)
