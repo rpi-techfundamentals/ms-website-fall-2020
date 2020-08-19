@@ -32,7 +32,7 @@ def pandas_to_md(df, file, title):
     s = title
     separator = "\n============================\n\n"
     #table=df.to_markdown(tablefmt="grid")
-    table=tabulate(df, tablefmt="pipe", headers="keys")
+    table=tabulate(df, tablefmt="pipe", headers="keys", index=False)
     output= s+separator+table
     with open(file, "w") as text_file:
         text_file.write(output)

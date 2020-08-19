@@ -5,7 +5,7 @@
 
 #######################################################################################
 # Book settings
-title                       : Quantitative Methods for Business @Rensselaer # The title of the book. Will be placed in the left navbar.
+title                       : MGMT 4100 Quantitative Methods for Business @Rensselaer # The title of the book. Will be placed in the left navbar.
 author                      : Jason Kuruzovich  # The author of the book
 copyright                   : "2020"  # Copyright year to be placed in the footer
 logo                        : "rpi.png"  # A path to the book logo
@@ -38,10 +38,10 @@ html:
 # Launch button settings
 launch_buttons:
   colab_url: "https://colab.research.google.com"
-  
+
 repository:
-  url                       : https://github.com/executablebooks/jupyter-book  # The URL to your book's repository
-  path_to_book              : "https://github.com/rpi-techfundamentals/ms-website-fall-2020"  # A path to your book's folder, relative to the repository root.
+  url                       : https://github.com/rpi-techfundamentals/ms-website-fall-2020  # The URL to your book's repository
+  path_to_book              : quant  # A path to your book's folder, relative to the repository root.
   branch                    : master  # Which branch of the repository should be used when creating links
 
 #######################################################################################

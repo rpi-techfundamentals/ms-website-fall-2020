@@ -1,4 +1,4 @@
-cp /Users/jasonkuruzovich/Box/Documents/Into-ml-app/book_fall_2020.xlsx   ./book.xlsx
+#cp /Users/jasonkuruzovich/Box/Documents/Into-ml-app/book_fall_2020.xlsx   ./book.xlsx
 source build.sh
 ghp-import -n -p -f quant/_build/html
 git add --all
