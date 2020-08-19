@@ -1,37 +1,37 @@
 Schedule
 ============================
 
-|    |   Week |   Session | Date                | Day   | Topic                                                                        |
-|---:|-------:|----------:|:--------------------|:------|:-----------------------------------------------------------------------------|
-|  0 |      1 |         1 | 2020-08-31 00:00:00 | Mon   | Welcome and class overview                                                   |
-|  1 |      1 |         2 | 2020-09-03 00:00:00 | Thu   | Intro to Management Science                                                  |
-|  2 |      2 |       nan | 2020-09-07 00:00:00 | Mon   | Labor day – no class                                                         |
-|  3 |      2 |         3 | 2020-09-08 00:00:00 | Tue   | Linear Programming 1 (First in Person Class, Tuesday follow Monday Schedule) |
-|  4 |      2 |         4 | 2020-09-10 00:00:00 | Thu   | Linear Programming 2                                                         |
-|  5 |      3 |         5 | 2020-09-14 00:00:00 | Mon   | LP - Sensitivity Analysis 1                                                  |
-|  6 |      3 |         6 | 2020-09-17 00:00:00 | Thu   | LP - Sensitivity Analysis 2                                                  |
-|  7 |      4 |         7 | 2020-09-21 00:00:00 | Mon   | LP - Modeling Examples 1                                                     |
-|  8 |      4 |         8 | 2020-09-24 00:00:00 | Thu   | LP - Modeling Examples 2                                                     |
-|  9 |      5 |         9 | 2020-09-28 00:00:00 | Mon   | Integer Programming                                                          |
-| 10 |      5 |        10 | 2020-10-01 00:00:00 | Thu   | Distribution Models                                                          |
-| 11 |      6 |        11 | 2020-10-05 00:00:00 | Mon   | Review for Exam 1                                                            |
-| 12 |      6 |        12 | 2020-10-08 00:00:00 | Thu   | Exam 1                                                                       |
-| 13 |      7 |       nan | 2020-10-12 00:00:00 | Mon   | Columbus day – no class                                                      |
-| 14 |      7 |        13 | 2020-10-15 00:00:00 | Thu   | Probability and Statistics 1                                                 |
-| 15 |      8 |        14 | 2020-10-19 00:00:00 | Mon   | Probability and Statistics 2                                                 |
-| 16 |      8 |        15 | 2020-10-22 00:00:00 | Thu   | Decision Analysis 1                                                          |
-| 17 |      9 |        16 | 2020-10-26 00:00:00 | Mon   | Decision Analysis 2,                                                         |
-| 18 |      9 |        17 | 2020-10-29 00:00:00 | Thu   | Term paper overview                                                          |
-| 19 |     10 |        18 | 2020-11-02 00:00:00 | Mon   | Waiting Lines Analysis 1                                                     |
-| 20 |     10 |        19 | 2020-11-05 00:00:00 | Thu   | Waiting Lines Analysis 2                                                     |
-| 21 |     11 |        20 | 2020-11-09 00:00:00 | Mon   | Forecasting 1                                                                |
-| 22 |     11 |        21 | 2020-11-12 00:00:00 | Thu   | Forecasting 2                                                                |
-| 23 |     12 |        22 | 2020-11-16 00:00:00 | Mon   | Inventory Management 1                                                       |
-| 24 |     12 |        23 | 2020-11-19 00:00:00 | Thu   | Inventory Management 2                                                       |
-| 25 |     13 |       nan | 2020-11-23 00:00:00 | Mon   | Thanksgiving                                                                 |
-| 26 |     13 |        24 | 2020-11-26 00:00:00 | Thu   | Simulation 1                                                                 |
-| 27 |     14 |        25 | 2020-11-30 00:00:00 | Mon   | Simulation 2                                                                 |
-| 28 |     14 |        26 | 2020-12-03 00:00:00 | Thu   | Term Paper Presentations                                                     |
-| 29 |     15 |        27 | 2020-12-07 00:00:00 | Mon   | Term Paper Presentations                                                     |
-| 30 |     15 |        28 | 2020-12-10 00:00:00 | Thu   | Review for Final                                                             |
-| 31 |    nan |       nan | TBD                 | nan   | Final Exam                                                                   |
+| Week   | Session   | Date   | Day   | Topic                                                                        |
+|:-------|:----------|:-------|:------|:-----------------------------------------------------------------------------|
+| 1      | 1         | 08/31  | Mon   | Welcome and class overview                                                   |
+| 1      | 2         | 09/03  | Thu   | Intro to Management Science                                                  |
+| 2      |           | 09/07  | Mon   | Labor day – no class                                                         |
+| 2      | 3         | 09/08  | Tue   | Linear Programming 1 (First in Person Class, Tuesday follow Monday Schedule) |
+| 2      | 4         | 09/10  | Thu   | Linear Programming 2                                                         |
+| 3      | 5         | 09/14  | Mon   | LP - Sensitivity Analysis 1                                                  |
+| 3      | 6         | 09/17  | Thu   | LP - Sensitivity Analysis 2                                                  |
+| 4      | 7         | 09/21  | Mon   | LP - Modeling Examples 1                                                     |
+| 4      | 8         | 09/24  | Thu   | LP - Modeling Examples 2                                                     |
+| 5      | 9         | 09/28  | Mon   | Integer Programming                                                          |
+| 5      | 10        | 10/01  | Thu   | Distribution Models                                                          |
+| 6      | 11        | 10/05  | Mon   | Review for Exam 1                                                            |
+| 6      | 12        | 10/08  | Thu   | Exam 1                                                                       |
+| 7      |           | 10/12  | Mon   | Columbus day – no class                                                      |
+| 7      | 13        | 10/15  | Thu   | Probability and Statistics 1                                                 |
+| 8      | 14        | 10/19  | Mon   | Probability and Statistics 2                                                 |
+| 8      | 15        | 10/22  | Thu   | Decision Analysis 1                                                          |
+| 9      | 16        | 10/26  | Mon   | Decision Analysis 2,                                                         |
+| 9      | 17        | 10/29  | Thu   | Term paper overview                                                          |
+| 10     | 18        | 11/02  | Mon   | Waiting Lines Analysis 1                                                     |
+| 10     | 19        | 11/05  | Thu   | Waiting Lines Analysis 2                                                     |
+| 11     | 20        | 11/09  | Mon   | Forecasting 1                                                                |
+| 11     | 21        | 11/12  | Thu   | Forecasting 2                                                                |
+| 12     | 22        | 11/16  | Mon   | Inventory Management 1                                                       |
+| 12     | 23        | 11/19  | Thu   | Inventory Management 2                                                       |
+| 13     |           | 11/23  | Mon   | Thanksgiving                                                                 |
+| 13     | 24        | 11/26  | Thu   | Simulation 1                                                                 |
+| 14     | 25        | 11/30  | Mon   | Simulation 2                                                                 |
+| 14     | 26        | 12/03  | Thu   | Term Paper Presentations                                                     |
+| 15     | 27        | 12/07  | Mon   | Term Paper Presentations                                                     |
+| 15     | 28        | 12/10  | Thu   | Review for Final                                                             |
+|        |           |        |       | Final Exam                                                                   |
