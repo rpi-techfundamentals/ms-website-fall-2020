@@ -1,5 +1,6 @@
-- file: intro
+file: markdown
+sections:
 - file: content
-  sections:
-    - file: markdown
-    - file: notebooks
+- file: intro
+- file: schedule
+- file: notebooks
