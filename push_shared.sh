@@ -1,4 +1,4 @@
-cp /Users/jasonkuruzovich/Box/Documents/Into-ml-app/book_fall_2020.xlsx   ./site/book.xlsx
+cp /Users/jasonkuruzovich/Box/Documents/Into-ml-app/book_fall_2020.xlsx   ./introml/book.xlsx
 source build.sh
 git add --all
 if [ -z "$1"]
