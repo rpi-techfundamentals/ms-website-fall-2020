@@ -1,5 +1,6 @@
-cp /Users/jasonkuruzovich/Box/Documents/Into-ml-app/book_fall_2020.xlsx   ./introml/book.xlsx
+cp /Users/jasonkuruzovich/Box/Documents/Into-ml-app/book_fall_2020.xlsx   ./book.xlsx
 source build.sh
+ghp-import -n -p -f introml/_build/html
 git add --all
 if [ -z "$1"]
 then
