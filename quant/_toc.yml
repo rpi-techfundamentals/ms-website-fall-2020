@@ -1,10 +1,18 @@
-file: intro
-sections:
-- file: schedule
-- file: syllabus
-- file: session1/02
-  sections:
-  - file: session1/01
-- file: sessions/session1
-  sections:
+- file: intro
+- chapters:
+  - file: schedule
+  - file: syllabus
+  part: OVERVIEW
+- chapters:
+  - file: sessions/session1
   - file: sessions/session2
+  - file: sessions/session3
+  - file: sessions/session4
+  numbered: true
+  part: SESSIONS
+- part: NOTEBOOKS
+  numbered: true
+  chapters:
+  - file: notebooks/python-overview
+  - file: notebooks/datastructures
+  - file: assignments/02starter

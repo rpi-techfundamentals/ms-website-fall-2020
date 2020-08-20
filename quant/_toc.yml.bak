@@ -1,0 +1,17 @@
+
+- part: Get started
+  chapters:
+    - file: schedule
+    - file: syllabus
+
+- part: SESSIONS
+  chapters:
+    - file: sessions/session1
+    - file: sessions/session2
+
+- part: NOTEBOOKS
+  chapters:
+    - file: session1/01
+    - file: session1/02
+
+- url: https://lms.rpi.edu

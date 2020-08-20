@@ -1,0 +1,16 @@
+- file: intro
+- part: OVERVIEW
+  chapters:
+  - file: schedule
+  - file: syllabus
+  - url: lms.rpi.edu
+- part: SESSIONS
+  numbered: true
+  chapters:
+  - file: sessions/session1
+  - file: sessions/session2
+#- part: NOTEBOOKS
+#  expand_sections: false
+#  chapters:
+#  - file: session1/01
+#  - file: session1/02
