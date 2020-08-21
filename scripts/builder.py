@@ -59,10 +59,10 @@ def update_yaml_file(file, kwargs):
 #     except subprocess.CalledProcessError as e:
 #         print("error: " + e)
 
-def create_md_title(title):
+def create_md_title(title, content=""):
     s = title
     separator = "\n============================\n\n"
-    return s+separator
+    return s+separator+content+"\n"
 
 def pandas_to_md(df, file, title, include):
     if DATE in df.columns:
@@ -105,7 +105,7 @@ def generate_sessions(config, toc, toc_part, schedule, path, content, keys):
     for index, row in schedule.iterrows():
         if row['Publish']=='1':
             toc[toc_part]['chapters'].append({'file': 'sessions/session'+row['Session']})
-            md_file=create_md_title(row['Topic']+' ('+row['Date'] +')')
+            md_file=create_md_title(row['Topic']+' ('+row['Date'] +')', row['Summary'])
             for key in keys:
                 content[key]=content[key].astype(str)
                 selection= content[key].loc[content[key]['Session']==row['Session'],:]
@@ -116,3 +116,15 @@ def generate_sessions(config, toc, toc_part, schedule, path, content, keys):
             with open(path / file, "w") as text_file:
                 text_file.write(md_file)
     return toc
+
+def link_generator(df, target,repo_url,link_name):
+    for index, row in df.iterrows():
+        if row['Type']=='Link':
+            df.loc[index,target]=row[target]+" ["+link_name+"]("+row['Location']+")"
+        elif row['Type']=='File':
+            df.loc[index,target]=row[target]+" ["+link_name+"]("+repo_url+"/raw/master/"+row['Location']+")"
+        elif row['Type'] in ['Notebook', 'Markdown']:
+            df.loc[index,target]=row[target]+" ["+link_name+"](../"+row['Location']+")"
+        #elif row['Type']=='Youtube'
+    df.drop(columns=['Location'],inplace=True)
+    return df

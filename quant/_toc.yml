@@ -1,7 +1,9 @@
 - file: intro
 - chapters:
-  - file: schedule
-  - file: syllabus
+  - file: content/schedule
+  - file: content/syllabus
+  - file: content/preparation
+  - file: content/assignments
   part: OVERVIEW
 - chapters:
   - file: sessions/session1
