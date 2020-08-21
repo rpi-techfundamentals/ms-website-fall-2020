@@ -64,7 +64,7 @@ def create_md_title(title, content=""):
     separator = "\n============================\n\n"
     return s+separator+content+"\n"
 
-def pandas_to_md(df, file, title, include):
+def pandas_to_md(df, file, title, header, include, footer):
     if DATE in df.columns:
         #if pd.core.dtypes.common.is_datetime_or_timedelta_dtype(df[DATE]):
         print("Converting datetime to ")
