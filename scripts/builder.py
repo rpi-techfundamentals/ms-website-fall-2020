@@ -128,3 +128,11 @@ def link_generator(df, target,repo_url,link_name):
         #elif row['Type']=='Youtube'
     df.drop(columns=['Location'],inplace=True)
     return df
+
+def create_syllabus(df, item, message, path,repo_url):
+    location=df.loc[item,'Location']
+    message=message+"\n[Syllabus]("+repo_url+"/raw/master/"+location+")"
+    message=create_md_title("Syllabus", content=message)
+    print("Outputting ", path)
+    with open(path , "w") as text_file:
+        text_file.write(message)

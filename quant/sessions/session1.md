@@ -3,6 +3,14 @@ Welcome and class overview  (08/31)
 
 In this class we will simply be providing a high level overview of the class.  We will introduce the basics of the concepts and the approaches used.  [Link](../../sessions/session1)
 
+## Before Class
+
+|   Session | Content                                                                                                            |
+|----------:|:-------------------------------------------------------------------------------------------------------------------|
+|         1 | Review Syllabus  [Link](https://github.com/rpi-techfundamentals/ms-website-fall-2020/raw/master/file/syllabus.pdf) |
+|         1 | Initial Survey [Link](https://forms.gle/6T7UdT7dZWboufeS7)                                                         |
+
+
 ## Assignment
 
 |   Session | Assignment                                                                                                                                                                                                                                                                                                  | Due        |
