@@ -64,7 +64,7 @@ def create_md_title(title, content=""):
     separator = "\n============================\n\n"
     return s+separator+content+"\n"
 
-def pandas_to_md(df, file, title, header, include, footer):
+def pandas_to_md(df, file, title,  include, header="",footer=""):
     if DATE in df.columns:
         #if pd.core.dtypes.common.is_datetime_or_timedelta_dtype(df[DATE]):
         print("Converting datetime to ")
@@ -80,14 +80,14 @@ def pandas_to_md(df, file, title, header, include, footer):
     df[float_cols]=df[float_cols].astype(int)
     df=df.astype(str)
     df=df.replace('-99', ' ')
-    md_title=create_md_title(title)
+    md_title=create_md_title(title, header)
 
     pd.set_option('precision', 0)
 
     table=df.loc[:,include].to_markdown(tablefmt="pipe", headers="keys", showindex="never")
 
     #table=tabulate(df, tablefmt="pipe", headers="keys")
-    output= md_title+table
+    output= md_title+table+footer
     print("Outputting file:", file)
     with open(file, "w") as text_file:
         text_file.write(output)
