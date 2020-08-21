@@ -1,16 +1,14 @@
 Sylabus
 ========
 
-Quantitative Methods for Business
-=================================
+##Quantitative Methods for Business
+
 
 **Course Number: MGMT 4100**
 
 **Credit Hours: 4**
 
 **Semester/Year: Fall 2020**
-
-**Room Location:** DARRIN 236
 
 **RPILMS:** <https://lms.rpi.edu/>
 
