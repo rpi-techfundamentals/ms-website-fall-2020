@@ -131,8 +131,10 @@ def link_generator(df, target,repo_url,link_name):
 
 def create_syllabus(df, item, message, path,repo_url):
     location=df.loc[item,'Location']
+    print(location)
     message=message+"\n[Syllabus]("+repo_url+"/raw/master/"+location+")"
     message=create_md_title("Syllabus", content=message)
     print("Outputting ", path)
     with open(path , "w") as text_file:
         text_file.write(message)
+    return message
