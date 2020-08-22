@@ -84,7 +84,7 @@ def pandas_to_md(df, file, title,  include, header="",footer=""):
 
     pd.set_option('precision', 0)
 
-    table=df.loc[:,include].to_markdown(tablefmt="pipe", headers="keys", showindex="never")
+    table=df.loc[:,include].to_markdown(tablefmt="pipe", headers="keys", index="never")
 
     #table=tabulate(df, tablefmt="pipe", headers="keys")
     output= md_title+table+footer
@@ -95,7 +95,7 @@ def pandas_to_md(df, file, title,  include, header="",footer=""):
 
 def add_row_md(md_file, title, df):
     md_file =md_file+'\n## '+title+'\n\n'
-    md_file =md_file+df.iloc[:,0:-1].to_markdown(tablefmt="pipe", headers="keys", showindex="never")
+    md_file =md_file+df.iloc[:,0:-1].to_markdown(tablefmt="pipe", headers="keys", index="never")
     md_file =md_file+'\n\n'
     return md_file
 
@@ -137,4 +137,3 @@ def create_syllabus(df, item, message, path,repo_url):
     print("Outputting ", path)
     with open(path , "w") as text_file:
         text_file.write(message)
-    return message

@@ -1,18 +1,19 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # YAML Files
+# # Jupyter Class Helper
 # ---
 # These files are used to configure and organize the website's contents.
 
-# In[ ]:
-
-
-# Only need to run once
-#!pip install ruamel.yaml
-
-
 # In[1]:
+
+
+#%load_ext autoreload
+#%autoreload 2
+#%matplotlib inline
+
+
+# In[2]:
 
 
 # Always run this before any of the following cells
@@ -21,180 +22,108 @@ import numpy as np
 import csv
 import logging
 import subprocess
-import ruamel.yaml
-
-
-# In[2]:
-
-
-def load_yaml_file(file):
-    """
-    Loads a yaml file from file system.
-    @param file Path to file to be loaded.
-    """
-    try:
-        with open(file, 'r') as yaml:
-            kwargs = ruamel.yaml.round_trip_load(yaml, preserve_quotes=True)
-        return kwargs
-    except subprocess.CalledProcessError as e:
-        print("error")
-    return(e.output.decode("utf-8"))
-
-def update_yaml_file(file, kwargs):
-    """
-    Updates a yaml file.
-    @param kwargs dictionary.
-    """
-    print("Updating the file: " + file)
-    try:
-        ruamel.yaml.round_trip_dump(kwargs, open(file, 'w'))
-    except subprocess.CalledProcessError as e:
-        print("error: " + e)
-        
-def write_md_file(filename, df):
-    print("Updating the file: " + filename)
-    df.to_csv(filename,  index=None, sep=' ',quoting = csv.QUOTE_NONE, escapechar = ' ')
-    
+import yaml
+import builder as bd
+from pathlib import Path
+base_path=Path('..')
+config_path = base_path / 'config'
+cf=bd.load_yaml_file(config_path / 'config.yml')
+excel_file= config_path / cf['excel_file']
+class_path= base_path / cf['class']
+content_path = class_path / 'content'
 
 
 # In[3]:
 
 
-# Configuration
-config = load_yaml_file('../_config.yml') # Load the file.
-config_xl= pd.read_excel('../book.xlsx', sheet_name = '_config_yml', header=None, index_col=None)
-for x in range(len(config_xl)):           # Update the Yaml with the config from excel
-    config[config_xl.iloc[x,0]]=config_xl.iloc[x,1]
-update_yaml_file('../_config.yml', config)
+# These load configuration from the excel files 
+config = bd.load_yaml_file(class_path / '_config.yml') # Load the file.
+toc = bd.load_yaml_file(class_path / '_toc.yml') # Load the file.
+config_xl= pd.read_excel(excel_file, sheet_name = '_config_yml', header=None, index_col=None)
+schedule= pd.read_excel(excel_file, sheet_name = 'Schedule',  index_col=None)
+content={}
+content['Before Class']= pd.read_excel(excel_file, sheet_name = 'Before',  index_col=None)
+content['In Class']= pd.read_excel(excel_file, sheet_name = 'During',  index_col=None)
+content['Assignment']= pd.read_excel(excel_file, sheet_name = 'Assignments',  index_col=None)
 
 
 # In[4]:
 
 
-# Table of contents (current)
-# 1. read the Excel sheet and create a yaml file from it.
-import re
-import os
-toc_yml= pd.read_excel('../book.xlsx', sheet_name = 'toc_yml', header=0)
-toc_yml.to_csv('../_data/toc2.yml',index=None,quoting=csv.QUOTE_NONE,escapechar=' ')
-
-# 2. replace double spaces with single spaces.
-with open('../_data/toc.yml', 'w') as out:
-    with open('../_data/toc2.yml', 'r') as f:
-        for line in f:
-            line = re.sub(r"  ", " ", line)
-            out.write(line)
-            
-# 3. delete toc2.yml
-os.remove('../_data/toc2.yml')
+#Create the syllabus link.
+#The second value of the index postion of the syllabus on the before class content.
+bd.create_syllabus(content['Before Class'],0,cf['syllabus_message'],content_path / 'syllabus.md', config['repository']['url'])
 
 
 # In[5]:
 
 
-# Table of contents (old approach - only works for an unchanging number of fields)
-# toc = load_yaml_file('../_data/toc.yml')
-# toc_xl= pd.read_excel('../book.xlsx', sheet_name = 'toc_yml',  index_col=None)
-# for x in range(len(toc_xl)):
-#     toc[toc_xl.loc[x,'index']]['title']=toc_xl.loc[x,'title']
-#     toc[toc_xl.loc[x,'index']]['url']=toc_xl.loc[x,'url']
-# update_yaml_file('../_data/toc.yml', toc)
+#Fix in case individual tries to publish where session is NA. This isn't allowed. 
+schedule.loc[schedule['Session'].isna(),'Publish']=0. 
 
 
 # In[6]:
 
 
-# Table of contents (experimental - currently doesn't work; see issue #3 in the repo)
-# from collections import OrderedDict
-# toc = load_yaml_file('../_data/toc.yml')                                 # load original yaml file
-# toc_xl= pd.read_excel('../book.xlsx',sheet_name ='toc_yml3',index_col=0) # load excel data
-# toc_ses= toc_xl.to_dict(into=OrderedDict,orient='records')               # convert excel df to list of OrderedDict
-# toc[3]['sections']= toc_ses
-# update_yaml_file('../_data/toc2.yml', toc)
+#Generate Links from the schedule to the sessions and within the other tables. 
+schedule.loc[schedule['Publish']==1,'Location']=schedule.loc[schedule['Publish']==1,'Session'].apply(lambda x: '../sessions/session'+str(int(x)))
+schedule.loc[schedule['Publish']==1,'Type']='Markdown'
+schedule=bd.link_generator(schedule, 'Summary',config['repository']['url'],'Link')
+content['Assignment']=bd.link_generator(content['Assignment'], 'Assignment',config['repository']['url'],'Starter')
+content['Before Class']=bd.link_generator(content['Before Class'], 'Content',config['repository']['url'],'Link')
+content['In Class']=bd.link_generator(content['In Class'], 'Content',config['repository']['url'],'Link')
 
-
-# # Markdown files
-# ---
-# These files comprise the site's content, aside from the notebooks already created.
 
 # In[7]:
 
 
-# Always run this before any of the following cells
-import pandas as pd
-import numpy as np
-import csv
+#Get the in class activities and prepare and output a markdown file. 
+schedule_ic=schedule.merge(content['In Class'], left_on='Session', right_on='Session', how='left')
+schedule_ic= schedule_ic.loc[schedule_ic['Content'].notnull(),['Week', 'Session', 'Date', 'Content']]
+schedule_ic=bd.pandas_to_md(schedule_ic, content_path / 'in_class.md', 'In Class',         include = ['Week', 'Session', 'Date', 'Content'], header=cf['in_class_header'])
 
 
 # In[8]:
 
 
-# Home
-index_file = '../content/index.md'
-index_md= pd.read_excel('../book.xlsx', sheet_name = 'index_md', header=0)
-write_md_file(index_file, index_md)
+#Get the before class activities and prepare and output a markdown file. 
+schedule_bc=schedule.merge(content['Before Class'], left_on='Session', right_on='Session', how='left')
+schedule_bc= schedule_bc.loc[schedule_bc['Content'].notnull(),['Week', 'Session', 'Date', 'Content']]
+schedule_bc=bd.pandas_to_md(schedule_bc, content_path / 'preparation.md', 'Before Class',                              include = ['Week', 'Session', 'Date', 'Content'], header=cf['bc_class_header'])
+schedule=schedule.merge(content['Assignment'], left_on='Session', right_on='Session', how='left')
 
 
 # In[9]:
 
 
-# Schedule
-schedule_file='../content/sessions/index.md'
-schedule_md= pd.read_excel('../book.xlsx', sheet_name = 'schedule_md', header=0)
-write_md_file(schedule_file, schedule_md)
+#Get the assignments and prepare and output a markdown file. 
+assignments_new = schedule.loc[schedule['Assignment'].notnull(),['Week', 'Session', 'Date', 'Assignment', 'Due']]
+assignments_new=bd.pandas_to_md(assignments_new, content_path / 'assignments.md', 'Assignments',                              include = ['Week', 'Session', 'Date', 'Assignment', 'Due'],header=cf['assignments_header'])
 
 
 # In[10]:
 
 
-# Sessions
-session_md= pd.read_excel('../book.xlsx',sheet_name='session_md',header=0,index_col=0,usecols="A:B")
-session_md=session_md.dropna()
-for index, row in session_md.iterrows():
-    session_file='../content/sessions/'+str(index)+'.md'
-    print("Updating the file: " + session_file)
-    row.to_csv(session_file,index=False,header=False,sep=' ',quoting = csv.QUOTE_NONE,
-               escapechar = ' ')
+#Output the schedule to markdown.
+schedule=bd.pandas_to_md(schedule, content_path / 'schedule.md', 'Schedule',                              include = ['Week', 'Session', 'Date', 'Day', 'Topic', 'Summary', 'Assignment', 'Due'],header=cf['schedule_header'])
 
 
 # In[11]:
 
 
-#Assignments
-assignments_file='../content/assignments/index.md'
-assignments_md= pd.read_excel('../book.xlsx', sheet_name = 'assignments_md', header=0)
-write_md_file(assignments_file, assignments_md)
+#Generate Session Files
+toc=bd.generate_sessions(config, toc, 2, schedule, class_path / 'sessions',content, ['Before Class', 'In Class', 'Assignment'])
 
 
 # In[12]:
 
 
-# Grading
-grading_file='../content/grading.md'
-grading_md= pd.read_excel('../book.xlsx', sheet_name = 'grading_md', header=0)
-write_md_file(grading_file, grading_md)
+#Update the sessions to the yaml file.  Other updates to notebooks need to be done manually.
+bd.update_yaml_file(class_path / '_toc.yml', toc)
 
 
-# In[15]:
+# In[13]:
 
 
-# Notebooks
-notebooks_file='../content/notebooks/index.md'
-notebooks_md= pd.read_excel('../book.xlsx', sheet_name = 'notebooks_md', header=0)
-write_md_file(notebooks_file, notebooks_md)
-
-
-# In[16]:
-
-
-# Readings
-readings_file='../content/sessions/readings.md'
-readings_md= pd.read_excel('../book.xlsx', sheet_name = 'readings_md', header=0)
-write_md_file(readings_file, readings_md)
-
-
-# In[ ]:
-
-
-
+#TBD Make it so that notebooks will show up in _toc.yml. 
 
