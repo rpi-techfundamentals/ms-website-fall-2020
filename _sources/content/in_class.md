@@ -1,9 +1,7 @@
 In Class
 ============================
 
-
-Please review following materials before the class session.
-
+\nPlease review following materials before the class session.\n
 |   Week |   Session | Date   | Content                                                   |
 |-------:|----------:|:-------|:----------------------------------------------------------|
 |      1 |         2 | 09/03  | Python Overview [Link](../notebooks/python-overview)      |
