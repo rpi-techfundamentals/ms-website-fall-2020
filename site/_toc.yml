@@ -19,3 +19,16 @@
   - file: notebooks/python-overview
   - file: notebooks/datastructures
   - file: assignments/02starter
+- part: IMPORTANT LINKS
+  numbered: true
+  chapters:
+  - url: https://lms.rpi.edu/
+    title: RPI LMS
+  - url: https://eurl.io/#YnuX1CwNt
+    title: Webex Teams Discussion
+  - url: https://eurl.io/#11TTxqc4I
+    title: Webex Teams Homework
+  - url: https://rensselaer.webex.com/meet/kuruzj
+    title: Prof Kuruzovich Class Link
+  - url: https://drive.google.com/open?id=1IGle5FErQZB7QLa2H3vqraGL9Oglh07P
+    title: Google Drive (Files)
