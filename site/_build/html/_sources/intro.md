@@ -1,7 +1,6 @@
 Welcome to Quantitative Methods for Business
 ============================
-```{tableofcontents}
-```
+
 IMPORTANT LINKS
 - [RPI LMS](https://lms.rpi.edu/)
 - [WEBEX TEAMS Discussion Space](https://eurl.io/#YnuX1CwNt)
