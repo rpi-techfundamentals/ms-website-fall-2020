@@ -1,6 +1,6 @@
 #cp /Users/jasonkuruzovich/Box/Documents/Into-ml-app/book_fall_2020.xlsx   ./book.xlsx
 source build.sh
-ghp-import -n -p -f ../site/_build/html -c CNAME, --cname=qm.analyticsdojo.com
+ghp-import -n -p -f ../site/_build/html -c CNAME, --cname=introml.analyticsdojo.com
 git add --all
 if [ -z "$1"]
 then

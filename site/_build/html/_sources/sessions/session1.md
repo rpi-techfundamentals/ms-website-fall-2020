@@ -12,9 +12,17 @@ In this class we will simply be providing a high level overview of the class.  W
 |         1 | Join this Webex Teams space.  [Link](https://eurl.io/#YnuX1CwNt)                                                                                                                                  |
 
 
+## In Class
+
+|   Session | Content                                                                                       |
+|----------:|:----------------------------------------------------------------------------------------------|
+|         1 | Presentation [Link](https://drive.google.com/drive/folders/1IGle5FErQZB7QLa2H3vqraGL9Oglh07P) |
+|         1 | Presentation [Link](https://drive.google.com/drive/folders/1IGle5FErQZB7QLa2H3vqraGL9Oglh07P) |
+
+
 ## Assignment
 
-|   Session | Assignment                                                                                                                                                                                                                                                                                                  | Due        |
-|----------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------|
-|         1 | In this starter assignment, we are just going to try and test that everyone can go through and utilize some of the basic technologies we will use in the class, including Excel Solver. [Starter](https://github.com/rpi-techfundamentals/ms-website-fall-2020/raw/master/files/assignments/01starter.xlsx) | 2020-09-07 |
+|   Session | Assignment                                                                                                                                                                                                                           | Due        |
+|----------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------|
+|         1 | In this starter assignment, we are just going to try and test that everyone can go through and utilize some basic modeling of business senarios. [Starter](https://drive.google.com/drive/folders/1IGle5FErQZB7QLa2H3vqraGL9Oglh07P) | 2020-09-10 |
 
