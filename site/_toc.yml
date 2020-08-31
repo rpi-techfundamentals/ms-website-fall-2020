@@ -18,7 +18,7 @@
   chapters:
   - file: notebooks/python-overview
   - file: notebooks/datastructures
-  - file: assignments/02starter
+
 - part: IMPORTANT LINKS
   numbered: true
   chapters:
