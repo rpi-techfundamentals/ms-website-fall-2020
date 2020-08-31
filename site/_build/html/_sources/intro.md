@@ -6,7 +6,7 @@ IMPORTANT LINKS
 - [WEBEX TEAMS Discussion Space](https://eurl.io/#YnuX1CwNt)
 - [WEBEX TEAMS Homework Space](https://eurl.io/#11TTxqc4I)
 - [WEBEX Meetings Classroom Link](https://rensselaer.webex.com/meet/kuruzj)
-- [Google Drive File link](https://drive.google.com/open?id=1IGle5FErQZB7QLa2H3vqraGL9Oglh07P)
+- [Box File Share](https://rpi.box.com/s/ldy9h2bfaz00gek5a9cotyz21sboab95)
 
 This is the website for the Rensselaer class *Quantitative Methods for Business*.
 
@@ -16,7 +16,7 @@ For class this semester, thank you in advance for complying with RPI mask polici
 
 Here is a quick reference for the systems that will be used in the class.  Please download the desktop copy of both Webex Meetings and Webex Teams via this [link](https://www.webex.com/downloads.html).
 
-## Webex Meetings: Hybrid Class Streaming  
+## Webex Meetings: Hybrid Class Streaming
 We will be using Webex Meetings to stream all classes.  The course recordings be made available through this website.
 [WEBEX Meetings Classroom Link](https://rensselaer.webex.com/meet/kuruzj)
 
@@ -24,16 +24,16 @@ We will be using Webex Meetings to stream all classes.  The course recordings be
 I want to be very responsive to your questions and concerns as we go through the class.  Webex Teams *(NOT EMAIL)* is the best way to reach me.  I would suggest downloading the Webex Teams application for your phone and desktop.  Because Webex meeting chats do not persist, we are going to use the Webex Teams space for text discussions even when streaming from Webex meetings.
 [WEBEX TEAMS Discussion Space](https://eurl.io/#YnuX1CwNt)
 
-This semester could be challenging if you don't know others from the class and are working remotely.  Feel free to use this as a drop in space.  Create a meeting and collaborate with others.  
+This semester could be challenging if you don't know others from the class and are working remotely.  Feel free to use this as a drop in space.  Create a meeting and collaborate with others.
 [WEBEX TEAMS Homework Space](https://eurl.io/#8TF4_qsE9)
 
 ## This Website: Course Content
 This website will be the primary source of content for the class. This includes readings, videos, Excel files, Jupyter notebooks, etc.
   - [Course Schedule](./content/schedule.md)  This covers when assignments are do.
   - Sessions Each day will summaries the variety of different activities on the session page.
-  - Assignments. All instructions for assignments will be provided in this website.  
+  - Assignments. All instructions for assignments will be provided in this website.
 
 ## LMS: Assignment Submission, Quizzes, and Grading
   - Please be aware of the variety of course assignments listed on the schedule. We might even through a few quizes in there. These will done through the LMS.
   - In some cases, a starter excel spreadsheet or Jupyter notebook will be provided. Always upload the actual completed .xlsx file or .ipynb file for grading rather than a pdf.
-[RPI LMS](https://lms.rpi.edu/)     
+[RPI LMS](https://lms.rpi.edu/)
