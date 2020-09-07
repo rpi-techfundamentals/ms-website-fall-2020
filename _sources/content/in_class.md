@@ -11,3 +11,4 @@ In Class
 |      1 |         2 | 09/03  | Webex Recording of Class [Link](https://rensselaer.webex.com/rensselaer/ldr.php?RCID=a4765e23f1074bf8a945ac6350835bf4) |
 |      2 |         3 | 09/08  | Python Overview [Link](../notebooks/python-overview)                                                                   |
 |      2 |         3 | 09/08  | Basic Data Structures [Link](../notebooks/datastructures)                                                              |
+|      2 |         3 | 09/08  | Solving Linear Programming Graphically [Link](../notebooks/graphical)                                                  |
