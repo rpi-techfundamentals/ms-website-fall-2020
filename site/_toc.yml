@@ -18,7 +18,12 @@
   chapters:
   - file: notebooks/python-overview
   - file: notebooks/datastructures
-
+  - file: notebooks/graphical
+- part: REF NOTEBOOKS
+  numbered: true
+  chapters:
+  - file: notebooks/book/tools_numpy
+  - file: notebooks/book/tools_matplotlib
 - part: IMPORTANT LINKS
   numbered: true
   chapters:
