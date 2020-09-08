@@ -121,3 +121,16 @@ x2_answer
 ct_answer = ct[max_value]
 ct_answer
 
+## Q1 Challenge
+
+What if the profit function is:
+
+Z = 70$x_{1}$ + 20$x_{2}$       
+
+Find the optimal solution using Python. Assign the answers to: 
+
+q1_profit_answer
+q1_x1_answer
+q1_x2_answer
+
+

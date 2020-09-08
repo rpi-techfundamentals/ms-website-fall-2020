@@ -1,7 +1,7 @@
 Linear Programming 1 (09/08)
 ============================
 
-TBD [Link](../../sessions/session3)
+This will be an introduction to solving linear programming graphically.  We are going to go though some basic concepts and solve using Python and Excel. [Link](../../sessions/session3)
 
 ## Before Class
 
