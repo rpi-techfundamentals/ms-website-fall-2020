@@ -9,3 +9,4 @@ Before Class
 |      1 |         1 | 08/31  | Join this Webex Teams space.  [Link](https://eurl.io/#YnuX1CwNt)                                                                                                                                  |
 |      1 |         2 | 09/03  | IMS Chapter 1                                                                                                                                                                                     |
 |      2 |         3 | 09/08  | IMS Chapter 2                                                                                                                                                                                     |
+|      2 |         4 | 09/10  | IMS Chapter 2                                                                                                                                                                                     |
