@@ -18,7 +18,8 @@
   chapters:
   - file: notebooks/python-overview
   - file: notebooks/datastructures
-  - file: notebooks/graphical
+  - file: notebooks/graphical-max
+  - file: notebooks/graphical-min
 - part: REF NOTEBOOKS
   numbered: true
   chapters:
