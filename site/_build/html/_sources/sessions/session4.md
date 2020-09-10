@@ -12,10 +12,10 @@ We will introduce the homework and go  through some problem solving examples. [L
 
 ## In Class
 
-|   Session | Content                                                                     |
-|----------:|:----------------------------------------------------------------------------|
-|         4 | Presentation [Link](https://rpi.box.com/s/ldy9h2bfaz00gek5a9cotyz21sboab95) |
-|         4 | Solving Linear Programming Graphically [Link](../notebooks/graphical-min)   |
+|   Session | Content                                                                                |
+|----------:|:---------------------------------------------------------------------------------------|
+|         4 | Presentation [Link](https://rpi.box.com/s/ldy9h2bfaz00gek5a9cotyz21sboab95)            |
+|         4 | Solving Minimization Linear Programming Graphically [Link](../notebooks/graphical-min) |
 
 
 ## Assignment

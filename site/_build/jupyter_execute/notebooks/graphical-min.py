@@ -76,7 +76,7 @@ ct
 
 #Calculate the minimum cost from ct
 #Z = 6 x1  + 3 x2
-cost = 6*ct+3*x2[0:9]
+cost = 6*ct+3*x2[0:9]#Shape of array must be the same.
 cost
 
 # Make plot for the Nitrogen Constraint

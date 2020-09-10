@@ -65,8 +65,13 @@ c2
 ct = np.minimum(c1,c2)
 ct
 
+#remove those valuese that don't follow non-negativity constraint.
+ct= ct[0:21]
+x2= x2[0:21] #Shape of array must be the same.
+ct
+
 #Calculate the profit from the constrained 
-profit = 40*ct+50*x2
+profit = 40*ct+50*x2 
 profit
 
 # Make plot for the labor constraint

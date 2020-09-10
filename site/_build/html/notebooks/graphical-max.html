@@ -138,6 +138,16 @@
    4. Linear Programming 2  (09/10)
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sessions/session5.html">
+   5. LP - Sensitivity Analysis 1  (09/14)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sessions/session6.html">
+   6. LP - Sensitivity Analysis 2  (09/17)
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -476,8 +486,25 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#remove those valuese that don&#39;t follow non-negativity constraint.</span>
+<span class="n">ct</span><span class="o">=</span> <span class="n">ct</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">21</span><span class="p">]</span>
+<span class="n">x2</span><span class="o">=</span> <span class="n">x2</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">21</span><span class="p">]</span> <span class="c1">#Shape of array must be the same.</span>
+<span class="n">ct</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([30.  , 29.25, 28.5 , 27.75, 27.  , 26.25, 25.5 , 24.75, 24.  ,
+       22.  , 20.  , 18.  , 16.  , 14.  , 12.  , 10.  ,  8.  ,  6.  ,
+        4.  ,  2.  ,  0.  ])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate the profit from the constrained </span>
-<span class="n">profit</span> <span class="o">=</span> <span class="mi">40</span><span class="o">*</span><span class="n">ct</span><span class="o">+</span><span class="mi">50</span><span class="o">*</span><span class="n">x2</span>
+<span class="n">profit</span> <span class="o">=</span> <span class="mi">40</span><span class="o">*</span><span class="n">ct</span><span class="o">+</span><span class="mi">50</span><span class="o">*</span><span class="n">x2</span> 
 <span class="n">profit</span>
 </pre></div>
 </div>
@@ -485,11 +512,7 @@
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([1200., 1220., 1240., 1260., 1280., 1300., 1320., 1340., 1360.,
        1330., 1300., 1270., 1240., 1210., 1180., 1150., 1120., 1090.,
-       1060., 1030., 1000.,  970.,  940.,  910.,  880.,  850.,  820.,
-        790.,  760.,  730.,  700.,  670.,  640.,  610.,  580.,  550.,
-        520.,  490.,  460.,  430.,  400.,  370.,  340.,  310.,  280.,
-        250.,  220.,  190.,  160.,  130.,  100.,   70.,   40.,   10.,
-        -20.,  -50.,  -80., -110., -140., -170., -200.])
+       1060., 1030., 1000.])
 </pre></div>
 </div>
 </div>
@@ -511,7 +534,7 @@
 <div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PolyCollection at 0x7ffb8f20b810&gt;
 </pre></div>
 </div>
-<img alt="../_images/graphical-max_10_1.png" src="../_images/graphical-max_10_1.png" />
+<img alt="../_images/graphical-max_11_1.png" src="../_images/graphical-max_11_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -531,7 +554,7 @@
 <div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PolyCollection at 0x7ffb8f7da3d0&gt;
 </pre></div>
 </div>
-<img alt="../_images/graphical-max_11_1.png" src="../_images/graphical-max_11_1.png" />
+<img alt="../_images/graphical-max_12_1.png" src="../_images/graphical-max_12_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -553,7 +576,7 @@
 <div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PolyCollection at 0x7ffb901c3510&gt;
 </pre></div>
 </div>
-<img alt="../_images/graphical-max_12_1.png" src="../_images/graphical-max_12_1.png" />
+<img alt="../_images/graphical-max_13_1.png" src="../_images/graphical-max_13_1.png" />
 </div>
 </div>
 <p>Our solution must be in in lies somewhere in the grey feasible region in the graph above. However, according to the fundamental theorum of Linear programming we know it is at a vertex.</p>
