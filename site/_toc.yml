@@ -22,6 +22,7 @@
   - file: notebooks/datastructures
   - file: notebooks/graphical-max
   - file: notebooks/graphical-min
+  - file: notebooks/computational
 - part: REF NOTEBOOKS
   numbered: true
   chapters:

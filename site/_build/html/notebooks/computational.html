@@ -1,0 +1,671 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>5. Computational Solutions &#8212; MGMT 4100 Quantitative Methods for Business @Rensselaer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Tools - NumPy" href="book/tools_numpy.html" />
+    <link rel="prev" title="4. Graphical Solutions" href="graphical-min.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">MGMT 4100 Quantitative Methods for Business @Rensselaer</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to Quantitative Methods for Business
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  OVERVIEW
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/schedule.html">
+   Schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/syllabus.html">
+   Syllabus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/preparation.html">
+   Before Class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/in_class.html">
+   In Class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/assignments.html">
+   Assignments
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  SESSIONS
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sessions/session1.html">
+   1. Welcome and class overview  (08/31)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sessions/session2.html">
+   2. Intro to Management Science  (09/03)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sessions/session3.html">
+   3. Linear Programming 1 (09/08)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sessions/session4.html">
+   4. Linear Programming 2  (09/10)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sessions/session5.html">
+   5. LP - Sensitivity Analysis 1  (09/14)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sessions/session6.html">
+   6. LP - Sensitivity Analysis 2  (09/17)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  NOTEBOOKS
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="python-overview.html">
+   1. Overview of Python Features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="datastructures.html">
+   2. Introduction Datastructures (Varibles, Lists, Dictionaries, and Sets)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="graphical-max.html">
+   3. Graphical Solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="graphical-min.html">
+   4. Graphical Solutions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Computational Solutions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  REF NOTEBOOKS
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="book/tools_numpy.html">
+   1. Tools - NumPy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="book/tools_matplotlib.html">
+   2. Tools - matplotlib
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  IMPORTANT LINKS
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://lms.rpi.edu/">
+   RPI LMS
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://eurl.io/#YnuX1CwNt">
+   Webex Teams Discussion
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://eurl.io/#11TTxqc4I">
+   Webex Teams Homework
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://rensselaer.webex.com/meet/kuruzj">
+   Prof Kuruzovich Class Link
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://rpi.box.com/s/ldy9h2bfaz00gek5a9cotyz21sboab95">
+   Box Share (Files)
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/computational.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rpi-techfundamentals/ms-website-fall-2020"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/rpi-techfundamentals/ms-website-fall-2020/issues/new?title=Issue%20on%20page%20%2Fnotebooks/computational.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/rpi-techfundamentals/ms-website-fall-2020/blob/master/site/notebooks/computational.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-to-linear-programming">
+   5.1. Introduction to Linear Programming
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#product-mix-problem-farmers-fields">
+   5.2. Product mix problem - Farmers Fields
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review-model">
+   5.3. Review Model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#markdown-of-output">
+   5.4. Markdown of output
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solve">
+   5.5. Solve
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#check-the-status">
+   5.6. Check the Status
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hurray">
+   5.7. Hurray!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   5.8. Exercise
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#product-mix-problem-beaver-creek-pottery-company">
+     5.8.1. Product mix problem - Beaver Creek Pottery Company
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="computational-solutions">
+<h1><span class="section-number">5. </span>Computational Solutions<a class="headerlink" href="#computational-solutions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction-to-linear-programming">
+<h2><span class="section-number">5.1. </span>Introduction to Linear Programming<a class="headerlink" href="#introduction-to-linear-programming" title="Permalink to this headline">¶</a></h2>
+<p>Computational environments provide organizations with the ability to implement solutions to complex time, in real time.</p>
+<p><a class="reference external" href="https://medium.com/opex-analytics/optimization-modeling-in-python-pulp-gurobi-and-cplex-83a62129807a">Scikit Learn, Pulp, CPLEX, and Gurobi</a> are  Python packages which provide capabilities for Linear programming and optimization.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!pip install pulp
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pulp in /Users/jasonkuruzovich/anaconda3/envs/tf2/lib/python3.7/site-packages (2.3)
+Requirement already satisfied: amply&gt;=0.1.2 in /Users/jasonkuruzovich/anaconda3/envs/tf2/lib/python3.7/site-packages (from pulp) (0.1.2)
+Requirement already satisfied: pyparsing in /Users/jasonkuruzovich/anaconda3/envs/tf2/lib/python3.7/site-packages (from amply&gt;=0.1.2-&gt;pulp) (2.4.7)
+Requirement already satisfied: docutils&gt;=0.3 in /Users/jasonkuruzovich/anaconda3/envs/tf2/lib/python3.7/site-packages (from amply&gt;=0.1.2-&gt;pulp) (0.15.2)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Import some required packages. </span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="product-mix-problem-farmers-fields">
+<h2><span class="section-number">5.2. </span>Product mix problem - Farmers Fields<a class="headerlink" href="#product-mix-problem-farmers-fields" title="Permalink to this headline">¶</a></h2>
+<p>Problem: How much of each brand to purchase to minimize total cost of fertilizer given following data ?</p>
+<p>Product resource requirements and unit profit:
+Two brands of fertilizer available – Super-gro, Crop-quick.
+Field requires at least 16 pounds of nitrogen and 24 pounds of phosphate.
+Super-gro costs $6 per bag, Crop-quick $3 per bag.</p>
+<p>Decision Variables:</p>
+<p><span class="math notranslate nohighlight">\(x_{1}\)</span> = number of bags of Super-gro</p>
+<p><span class="math notranslate nohighlight">\(x_{2}\)</span> = number of bags of Crop-quick</p>
+<p>Cost (Z) minimization</p>
+<p>Z = 6$x_{1}$ + 3$x_{2}$</p>
+<p>Nitrogen Constraint</p>
+<p>2$x_{1}$ + 4$x_{2}$ &gt;= 16</p>
+<p>Phosphate Constraint Check</p>
+<p>4$x_{1}$ + 3$x_{2}$ &gt;= 24</p>
+<p>Non-negativitiy Constraint</p>
+<p><span class="math notranslate nohighlight">\(x_{1}\)</span> &gt; 0</p>
+<p><span class="math notranslate nohighlight">\(x_{2}\)</span> &gt; 0</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Initialize the model as a minimization problem. </span>
+<span class="kn">import</span> <span class="nn">pulp</span> <span class="k">as</span> <span class="nn">pl</span>
+<span class="n">opt_model</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">LpProblem</span><span class="p">(</span><span class="s2">&quot;MIPModel&quot;</span><span class="p">,</span> <span class="n">pl</span><span class="o">.</span><span class="n">LpMinimize</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Set the variables. Notice this is where we put </span>
+<span class="c1"># the &quot;non-negativity&quot; constraint</span>
+<span class="n">x1</span> <span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">LpVariable</span><span class="p">(</span><span class="n">cat</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">LpInteger</span><span class="p">,</span> <span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;$x_</span><span class="si">{1}</span><span class="s2">$&quot;</span><span class="p">)</span> 
+<span class="n">x2</span> <span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">LpVariable</span><span class="p">(</span><span class="n">cat</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">LpInteger</span><span class="p">,</span> <span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;$x_</span><span class="si">{2}</span><span class="s2">$&quot;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Set the objective function</span>
+<span class="n">opt_model</span> <span class="o">+=</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">x1</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x2</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Set the Constraints</span>
+<span class="n">opt_model</span> <span class="o">+=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x1</span>  <span class="o">+</span> <span class="mi">4</span><span class="o">*</span> <span class="n">x2</span>  <span class="o">&gt;=</span> <span class="mi">16</span>
+
+<span class="n">opt_model</span> <span class="o">+=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">x1</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x2</span> <span class="o">&gt;=</span> <span class="mi">24</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="review-model">
+<h2><span class="section-number">5.3. </span>Review Model<a class="headerlink" href="#review-model" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have created the model we can review it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">opt_model</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>MIPModel:
+MINIMIZE
+6*$x_{1}$ + 3*$x_{2}$ + 0
+SUBJECT TO
+_C1: 2 $x_{1}$ + 4 $x_{2}$ &gt;= 16
+
+_C2: 4 $x_{1}$ + 3 $x_{2}$ &gt;= 24
+
+VARIABLES
+0 &lt;= $x_{1}$ Integer
+0 &lt;= $x_{2}$ Integer
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="markdown-of-output">
+<h2><span class="section-number">5.4. </span>Markdown of output<a class="headerlink" href="#markdown-of-output" title="Permalink to this headline">¶</a></h2>
+<p>If we copy the above text into a markdown cell you will see the implications of the varous models.</p>
+<p>MIPModel:</p>
+<p>MINIMIZE</p>
+<p>6*<span class="math notranslate nohighlight">\(x_{1}\)</span> + 3*<span class="math notranslate nohighlight">\(x_{2}\)</span> + 0</p>
+<p>SUBJECT TO</p>
+<p>_C1: 2 <span class="math notranslate nohighlight">\(x_{1}\)</span> + 4 <span class="math notranslate nohighlight">\(x_{2}\)</span> &gt;= 16</p>
+<p>_C2: 4 <span class="math notranslate nohighlight">\(x_{1}\)</span> + 3 <span class="math notranslate nohighlight">\(x_{2}\)</span> &gt;= 24</p>
+<p>VARIABLES</p>
+<p>0 &lt;= <span class="math notranslate nohighlight">\(x_{1}\)</span> Integer</p>
+<p>0 &lt;= <span class="math notranslate nohighlight">\(x_{2}\)</span> Integer</p>
+</div>
+<div class="section" id="solve">
+<h2><span class="section-number">5.5. </span>Solve<a class="headerlink" href="#solve" title="Permalink to this headline">¶</a></h2>
+<p>We now solve the system of equations with the solve command.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Solve the program</span>
+<span class="n">opt_model</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="check-the-status">
+<h2><span class="section-number">5.6. </span>Check the Status<a class="headerlink" href="#check-the-status" title="Permalink to this headline">¶</a></h2>
+<p>Here are 5 status codes:</p>
+<ul class="simple">
+<li><p><strong>Not Solved</strong>: Status prior to solving the problem.</p></li>
+<li><p><strong>Optimal</strong>: An optimal solution has been found.</p></li>
+<li><p><strong>Infeasible</strong>: There are no feasible solutions (e.g. if you set the constraints x &lt;= 1 and x &gt;=2).</p></li>
+<li><p><strong>Unbounded</strong>: The constraints are not bounded, maximising the solution will tend towards infinity (e.g. if the only constraint was x &gt;= 3).</p></li>
+<li><p><strong>Undefined</strong>: The optimal solution may exist but may not have been found.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pl</span><span class="o">.</span><span class="n">LpStatus</span><span class="p">[</span><span class="n">opt_model</span><span class="o">.</span><span class="n">status</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;Optimal&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">opt_model</span><span class="o">.</span><span class="n">variables</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="s2">&quot; = &quot;</span><span class="p">,</span> <span class="n">variable</span><span class="o">.</span><span class="n">varValue</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>$x_{1}$  =  0.0
+$x_{2}$  =  8.0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="hurray">
+<h2><span class="section-number">5.7. </span>Hurray!<a class="headerlink" href="#hurray" title="Permalink to this headline">¶</a></h2>
+<p>We got the same answer as we did before.</p>
+</div>
+<div class="section" id="exercise">
+<h2><span class="section-number">5.8. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+<p>Solve the LP problem for Beaver Creek Pottery using the maximization model type (<code class="docutils literal notranslate"><span class="pre">pl.LpMaximize</span></code>).</p>
+<div class="section" id="product-mix-problem-beaver-creek-pottery-company">
+<h3><span class="section-number">5.8.1. </span>Product mix problem - Beaver Creek Pottery Company<a class="headerlink" href="#product-mix-problem-beaver-creek-pottery-company" title="Permalink to this headline">¶</a></h3>
+<p>How many bowls and mugs should be produced to maximize profits given labor and materials constraints?</p>
+<p>Product resource requirements and unit profit:</p>
+<p>Decision Variables:</p>
+<p><span class="math notranslate nohighlight">\(x_{1}\)</span> = number of bowls to produce per day</p>
+<p><span class="math notranslate nohighlight">\(x_{2}\)</span> = number of mugs to produce per day</p>
+<p>Profit (Z)  Mazimization</p>
+<p>Z = 40$x_{1}$ + 50$x_{2}$</p>
+<p>Labor Constraint Check</p>
+<p>1$x_{1}$ + 2$x_{2}$ &lt;= 40</p>
+<p>Clay (Physicial Resource) Constraint Check</p>
+<p>4$x_{1}$ + 3$x_{2}$ &lt;= 120</p>
+<p>Negative Production Constaint Check</p>
+<p><span class="math notranslate nohighlight">\(x_{1}\)</span> &gt; 0</p>
+<p><span class="math notranslate nohighlight">\(x_{2}\)</span> &gt; 0</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="graphical-min.html" title="previous page"><span class="section-number">4. </span>Graphical Solutions</a>
+    <a class='right-next' id="next-link" href="book/tools_numpy.html" title="next page"><span class="section-number">1. </span>Tools - NumPy</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Jason Kuruzovich<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-32817743-7', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
