@@ -14,12 +14,18 @@ import matplotlib.pyplot as plt
 %matplotlib inline
 
 ## Product mix problem - Farmers Fields
-Problem: How much of each brand to purchase to minimize total cost of fertilizer given following data ?
+
+Problem: How much of each brand to purchase to minimize total cost of fertilizer given following data?
 
 Product resource requirements and unit profit:
+
 Two brands of fertilizer available – Super-gro, Crop-quick.
+
 Field requires at least 16 pounds of nitrogen and 24 pounds of phosphate.
-Super-gro costs $6 per bag, Crop-quick $3 per bag.
+
+Super-gro costs: `$6 per bag` 
+
+Crop-quick: `$3 per bag`
 
 
 Decision Variables:
@@ -47,7 +53,6 @@ Non-negativitiy Constraint
 $x_{1}$ > 0
 
 $x_{2}$ > 0
-
 
 
 #Initialize the model as a minimization problem. 
