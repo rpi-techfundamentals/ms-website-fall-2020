@@ -164,3 +164,8 @@ $x_{2}$ > 0
 
 
 
+## Sensitivity Analysis
+
+for name, c in opt_model.constraints.items():
+    print (name, ":", c, "\t", c.pi, "\t\t", c.slack)
+

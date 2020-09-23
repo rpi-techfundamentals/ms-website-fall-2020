@@ -24,3 +24,5 @@ In Class
 |      3 |         5 | 09/14  | Webex Recording of Class (Part 2) [Link](https://rensselaer.webex.com/rensselaer/ldr.php?RCID=76c9808239844395a3d319d556ccf122)         |
 |      3 |         6 | 09/17  | Presentation [Link](https://rpi.box.com/s/ldy9h2bfaz00gek5a9cotyz21sboab95)                                                             |
 |      3 |         6 | 09/17  | Pulp [Link](../notebooks/computational)                                                                                                 |
+|      3 |         6 | 09/17  | Webex Recording of Class [Link](https://rensselaer.webex.com/rensselaer/ldr.php?RCID=72236ad1d33e4600b905879e58e1ab1b)                  |
+|      4 |         7 | 09/21  | Webex Recording of Class [Link](https://rensselaer.webex.com/rensselaer/ldr.php?RCID=af13c8883399464c824fce0a30adea20)                  |
