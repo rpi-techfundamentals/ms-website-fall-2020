@@ -1,33 +1,33 @@
-- file: intro
-- chapters:
-  - file: content/schedule
-  - file: content/syllabus
-  - file: content/preparation
-  - file: content/in_class
-  - file: content/assignments
-  part: OVERVIEW
-- chapters:
-  - file: sessions/session1
-  - file: sessions/session2
-  - file: sessions/session3
-  - file: sessions/session4
-  - file: sessions/session5
-  - file: sessions/session6
-  numbered: true
-  part: SESSIONS
-- part: NOTEBOOKS
-  numbered: true
-  chapters:
-  - file: notebooks/python-overview
-  - file: notebooks/datastructures
-  - file: notebooks/graphical-max
-  - file: notebooks/graphical-min
-  - file: notebooks/computational
-- part: REF NOTEBOOKS
-  numbered: true
-  chapters:
-  - file: notebooks/book/tools_numpy
-  - file: notebooks/book/tools_matplotlib
+# # - file: intro
+# # - chapters:
+# #   - file: content/schedule
+# #   - file: content/syllabus
+# #   - file: content/preparation
+# #   - file: content/in_class
+# #   - file: content/assignments
+#   part: OVERVIEW
+# - chapters:
+#   - file: sessions/session1
+#   - file: sessions/session2
+#   - file: sessions/session3
+#   - file: sessions/session4
+#   - file: sessions/session5
+#   - file: sessions/session6
+#   numbered: true
+#   part: SESSIONS
+# - part: NOTEBOOKS
+#   numbered: true
+#   chapters:
+#   - file: notebooks/python-overview
+#   - file: notebooks/datastructures
+#   - file: notebooks/graphical-max
+#   - file: notebooks/graphical-min
+#   - file: notebooks/computational
+# - part: REF NOTEBOOKS
+#   numbered: true
+#   chapters:
+#   - file: notebooks/book/tools_numpy
+#   - file: notebooks/book/tools_matplotlib
 - part: IMPORTANT LINKS
   numbered: true
   chapters:
